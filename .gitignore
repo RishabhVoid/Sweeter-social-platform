@@ -1,0 +1,64 @@
+# Node.js
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# TypeScript
+*.tsbuildinfo
+
+# IDEs and Editors
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+.env.development
+.env.test
+.env.production
+.env.*.development
+.env.*.test
+.env.*.production
+
+# Client (React) specific
+/client/node_modules/
+/client/build/
+
+# Server (Express) specific
+/server/node_modules/
+/server/dist/
+/server/public/
+
+# Dependencies
+/client/package-lock.json
+/client/yarn.lock
+/server/package-lock.json
+/server/yarn.lock
+
+# Build output
+/client/build/
+/server/dist/
+
+# Coverage directory used by tools like istanbul
+/coverage/
+
+# nyc test coverage
+.nyc_output/
+
+# Log files
+*.log
+
+# Commonly used build tools
+gulp-debug.log
+
+# Add any other files or directories that should be ignored here

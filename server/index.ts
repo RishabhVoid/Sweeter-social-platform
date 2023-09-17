@@ -31,7 +31,7 @@ dotenv.config();
 
 const io = new Server(httpServer, {
   cors: {
-    origin: "https://sweeter-silenxika.vercel.app",
+    origin: "https://sweeter-platform.vercel.app/",
     methods: ["GET", "POST"],
   },
 });

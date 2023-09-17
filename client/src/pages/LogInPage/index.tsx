@@ -3,7 +3,7 @@ import { styled } from "styled-components";
 import CustomButton from "../../common/components/CustomButton";
 import colors from "../../common/data/colors";
 import useLogIn from "./hooks/useLogIn";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const LogInPage = () => {
   const [isDisabled, setIsDisabled] = useState(false);
@@ -17,6 +17,10 @@ const LogInPage = () => {
     handleSubmit,
     resetForm,
   } = useLogIn(setIsDisabled);
+
+  useEffect(() => {
+    document.title = "Sweeter Log-In";
+  }, []);
 
   return (
     <Wrapper>

@@ -32,7 +32,7 @@ const DashboardPage = () => {
 
   const socket = connect(uri);
 
-  const { setAlertState, setUserState } = useContext(AppContext);
+  const { setAlertState, setUserState, userState } = useContext(AppContext);
 
   const updateLikedPost = (postId: String, userEmail: string) => {
     setPosts((posts) => {
@@ -172,6 +172,7 @@ const DashboardPage = () => {
   useEffect(() => {
     (async () => await getUserData())();
     (async () => await getPosts())();
+    document.title = `${userState.name} Home`;
     return () => {
       socket.disconnect();
     };

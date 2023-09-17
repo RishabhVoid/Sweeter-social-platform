@@ -148,6 +148,11 @@ const DmPage = () => {
     };
   }, []);
 
+  useEffect(() => {
+    if (!friendData.name.trim()) return;
+    document.title = `Dm @${friendData.name}`;
+  }, [friendData.name]);
+
   return (
     <Wrapper>
       <DmSidebar

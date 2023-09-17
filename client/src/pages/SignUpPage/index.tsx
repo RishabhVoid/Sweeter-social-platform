@@ -1,6 +1,6 @@
 import { styled } from "styled-components";
 import useSignUp from "./hooks/useSignUp";
-import { useCallback, useContext, useState } from "react";
+import { useCallback, useContext, useEffect, useState } from "react";
 import CustomButton from "../../common/components/CustomButton";
 import AddPhotoAlternateIcon from "@mui/icons-material/AddPhotoAlternate";
 import colors from "../../common/data/colors";
@@ -47,6 +47,10 @@ const SignUpPage = () => {
     multiple: false,
     maxSize: config.maxSizeInBytes,
   });
+
+  useEffect(() => {
+    document.title = "Sweeter Sign-Up";
+  }, []);
 
   return (
     <Wrapper>
